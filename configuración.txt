@@ -134,3 +134,26 @@ toggle-wifi: toggle-wifi
 # terminal
 /system routerboard mode-button set enabled=yes on-event=toggle-wifi
 
+
+==================================================================================================================
+## ⚡ Automatización:
+
+# -
+# Tarea automática en vez de levantarme dos veces al día para darle al botón y apagarlo o encenderlo
+# de esta forma pulsar el botón solo será opcional
+System → Scheduler
+
+# Crear tarea “WiFi OFF”
++ 
+Name: wifi-off
+Start Time: 22:00:00
+Interval: 24:00:00
+On Event: /interface wireless disable wlan1 wlan2
+
+# Crear tarea “WiFi ON”
++ 
+Name: wifi-on
+Start Time: 05:00:00
+Interval: 24:00:00
+On Event: /interface wireless enable wlan1 wlan2
+
