@@ -157,3 +157,24 @@ Start Time: 05:00:00
 Interval: 24:00:00
 On Event: /interface wireless enable wlan1 wlan2
 
+
+==================================================================================================================
+## ⚡ CREO UNA NUEVA VLAN:
+
+# Este proyecto tengo que hacerlo en un futuro...
+
+# -
+En WinBox → Interfaces → VLAN → +
+Name: vlan30-vulnservers
+VLAN ID: 30
+Interface: bridge
+
+IP → Addresses → +
+Address: 192.168.30.1/24
+Interface: vlan30-servers
+
+El LXC posteriormente:
+# tengo que agregar la VLAN al network de PROXMOX
+192.168.30.200
+Gateway: 192.168.30.1
+
