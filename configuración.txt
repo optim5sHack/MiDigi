@@ -178,3 +178,67 @@ El LXC posteriormente:
 192.168.30.200
 Gateway: 192.168.30.1
 
+==================================================================================================================
+## ⚡ MANTENER UNA RED FAMILIAR:
+
+# Mantengo un sistema CleanBrowsing 
+En WinBox → IP → DNS → Servers
+  + 185.228.168.168
+  + 185.228.169.168
+  [x] Allow Remote Requests
+
+## todo lo que se conecte a tu MikroTik tenga que utilizar esos DNS
+IP → Firewall → NAT → +
+-----------------------------------------------
+Comment: 👉 Obligar a otros equipos a mantener mis DNS
+- Chain: dstnat
+- In. Interface: bridge
+- Protocol: udp
+- Dst. Port: 53
+Action:
+- Action: redirect
+- To Ports: 53
+Apply → OK.
+-----------------------------------------------
+
+# Vuelvo a crear otro exactamente igual pero con estos cambios → +
+-----------------------------------------------
+Comment: 👉 Obligar a otros equipos a mantener mis DNS
+- Protocol: tcp
+- Dst. Port: 53
+Action:
+- Action: redirect
+- To Ports: 53
+-----------------------------------------------
+
+## Vuelvo a obligar por si consiguen escaparse en la primera capa
+WinBox → IP → Firewall → NAT → +
+-----------------------------------------------
+Comment: 👉 Obligar a otros equipos a mantener mis DNS 
+DNS UDP
+General
+- Chain: dstnat
+- In. Interface: bridge
+- Protocol: udp
+- Dst. Port: 53
+Action
+- Action: redirect
+- To Ports: 53
+Pulsa Apply → OK.
+-----------------------------------------------
+
+# Creo otra igual
+WinBox → IP → Firewall → NAT → +
+-----------------------------------------------
+Comment: 👉 Obligar a otros equipos a mantener mis DNS 
+# Creo otra igual, cambiando solamente:
+- Protocol: tcp
+- Dst. Port: 53
+Action:
+- Action: redirect
+- To Ports: 53
+-----------------------------------------------
+
+
+
+
