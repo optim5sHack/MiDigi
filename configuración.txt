@@ -181,6 +181,9 @@ Gateway: 192.168.30.1
 ==================================================================================================================
 ## ⚡ MANTENER UNA RED FAMILIAR:
 
+// DNS filtrado → bloquea dominios de contenido adulto, malware, phishing y otras categorías peligrosas.
+// Ciberseguridad → reduce el riesgo de acceder a sitios maliciosos y añade una capa de protección a toda la red.
+
 # Mantengo un sistema CleanBrowsing 
 En WinBox → IP → DNS → Servers
   + 185.228.168.168
