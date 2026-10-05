@@ -181,6 +181,7 @@ Gateway: 192.168.30.1
 ==================================================================================================================
 ## ⚡ MANTENER UNA RED FAMILIAR:
 
+# Voy a forzar utilizar en toda mi red los DNS de 'CleanBrowsing'
 // DNS filtrado → bloquea dominios de contenido adulto, malware, phishing y otras categorías peligrosas.
 // Ciberseguridad → reduce el riesgo de acceder a sitios maliciosos y añade una capa de protección a toda la red.
 
