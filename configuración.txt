@@ -215,7 +215,6 @@ Action:
 - To Ports: 53
 -----------------------------------------------
 
-
 # Finalmente me queda agregar los mismos DNS desde la compañia contratada de movil:
 Datos móviles → operador móvil → Internet → DNSs CleanBrowsing
 
