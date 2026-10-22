@@ -1,4 +1,16 @@
 ==================================================================================================================
+## ⚡ BACKUP IMPORT/EXPORT:
+
+# Exportar
+Files > Backup (opcional con contraseña) > Backup
+Botón derecho > Download
+
+# Importar
+Arrastra el archivo .rsc del escritorio al cuadro de "Files > Backup"
+Terminal: /import <nombre>.rsc
+
+
+==================================================================================================================
 ## ⚡ CONFIGURACIÓN PPoE:
 
 ## cambio contraseña
