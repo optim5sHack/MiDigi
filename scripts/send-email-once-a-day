@@ -1,0 +1,13 @@
+Comment: Enviar correo diario
+Name: send-email-once-a-day
+Dont´t require permissions: [x]
+Policy: write, read, policy, test
+Source:
+--------------------------------------------------------------------------------
+/tool e-mail send \
+    to="isaacnavajas@gmail.com" \
+    subject="📬 MikroHack: Informe diario" \
+    body="🟢 MikroTik operativo. Aviso diario automático."
+
+:log info "Correo diario enviado"
+--------------------------------------------------------------------------------
