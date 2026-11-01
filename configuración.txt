@@ -147,6 +147,14 @@ toggle-wifi: toggle-wifi
 /system routerboard mode-button set enabled=yes on-event=toggle-wifi
 
 
+# -
+## Script - enviar correo para comprobar estado del wifi (si no llega el correo estará apagado): 
+# System > Scripts
+-----------------------------------------------
+"toggle-wifi": "script de la carpeta /scripts/send-email-once-a-day de este repositorio"
+-----------------------------------------------
+
+
 ==================================================================================================================
 ## ⚡ Automatización:
 
@@ -172,6 +180,14 @@ Interval: 24:00:00
 On Event: 
 /interface wireless enable wlan1
 /interface wireless enable wlan2
+
+# Crear tarea “correo-operativo-diario”
++ 
+Name: correo-operativo-diario
+Start Time: 23:00:00
+Interval: 24:00:00
+On Event: 
+/system script run send-email-once-a-day
 
 
 ==================================================================================================================
